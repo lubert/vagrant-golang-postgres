@@ -47,7 +47,7 @@ sudo apt-get install -y curl git mercurial make binutils bison gcc build-essenti
 if [ ! -f /usr/local/go/bin/go ]; then
   wget –quiet https://storage.googleapis.com/golang/go$GO_VERSION.linux-amd64.tar.gz
   sudo tar -C /usr/local -xzf go$GO_VERSION.linux-amd64.tar.gz
-  echo "export GOPATH=/vagrant/" >> /home/vagrant/.bashrc
+  echo "export GOPATH=/vagrant" >> /home/vagrant/.bashrc
   echo "export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin" >> /home/vagrant/.bashrc
 fi
 
