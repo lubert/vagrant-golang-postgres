@@ -146,8 +146,7 @@ sudo bash -c "echo \"client_encoding = utf8\" >> \"$PG_CONF\""
 # Restart so that all new config is loaded:
 sudo service postgresql restart
 
-cat <<EOF
- EOF | su - postgres -c psql
+cat << EOF | su - postgres -c psql
 -- Create the database user:
 CREATE USER $APP_DB_USER WITH PASSWORD '$APP_DB_PASS';
 
